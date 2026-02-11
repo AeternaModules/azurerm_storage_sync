@@ -14,7 +14,7 @@ EOT
     location                = string
     name                    = string
     resource_group_name     = string
-    incoming_traffic_policy = optional(string, "AllowAllTraffic")
+    incoming_traffic_policy = optional(string) # Default: "AllowAllTraffic"
     tags                    = optional(map(string))
   }))
 }
