@@ -1,3 +1,7 @@
+output "storage_syncs_id" {
+  description = "Map of id values across all storage_syncs, keyed the same as var.storage_syncs"
+  value       = { for k, v in azurerm_storage_sync.storage_syncs : k => v.id }
+}
 output "storage_syncs_incoming_traffic_policy" {
   description = "Map of incoming_traffic_policy values across all storage_syncs, keyed the same as var.storage_syncs"
   value       = { for k, v in azurerm_storage_sync.storage_syncs : k => v.incoming_traffic_policy }
