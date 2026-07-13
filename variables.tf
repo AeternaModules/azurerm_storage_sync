@@ -14,7 +14,7 @@ EOT
     location                = string
     name                    = string
     resource_group_name     = string
-    incoming_traffic_policy = optional(string) # Default: "AllowAllTraffic"
+    incoming_traffic_policy = optional(string)
     tags                    = optional(map(string))
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_storage_sync's provider source ---
